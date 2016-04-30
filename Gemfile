@@ -44,3 +44,4 @@ end
 
 gem 'puma'
 gem 'protected_attributes'
+gem 'therubyracer'
