@@ -8,7 +8,9 @@ class DevicesController < ApplicationController
   end
 
   def follows_latest
-    render json: @device.follows_latest_data
+    response = @device.as_response_hash
+    response[:people_data] = @device.follows_latest_data
+    render json: response
   end
 
   def get_code
